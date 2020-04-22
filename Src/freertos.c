@@ -47,8 +47,11 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 extern uint8_t dataToReceive[64];
-uint8_t dataToSend_TRND[USB_HID_DATA_TO_HOST_LENGTH + 1], *p1;
-uint8_t USB_HID_dataToSend[64];
+uint8_t blink_delay = 0xff;
+//uint8_t dataToSend_TRND[USB_HID_DATA_TO_HOST_LENGTH + 1], *p1;
+
+//uint8_t USB_HID_dataToSend[USB_HID_DATA_TO_HOST_LENGTH + 1];
+uint8_t USB_HID_dataToSend[USB_HID_DATA_TO_HOST_LENGTH + 1] = {1, 2, 3, 4,};
 extern USBD_HandleTypeDef hUsbDeviceFS;
  uint8_t flag;
  uint8_t usb_hid_rec_mes;
@@ -170,7 +173,7 @@ void StartLedTask(void const * argument)
   for(;;)
   {
 		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-    osDelay(1000);
+    osDelay(0x35 + 4 * blink_delay);
   }
   /* USER CODE END StartLedTask */
 }
@@ -188,15 +191,17 @@ void StartUSBReceiveTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-						if(dataToReceive[2] == 1) usb_hid_rec_mes |= 1 << 0 ;
-		else usb_hid_rec_mes &= ~(1 << 0);
-				if(dataToReceive[3] == 1) usb_hid_rec_mes |= 1 << 1 ;
-		else usb_hid_rec_mes &= ~(1 << 1);
-				if(dataToReceive[4] == 1) usb_hid_rec_mes |= 1 << 2 ;
-		else usb_hid_rec_mes &= ~(1 << 2);
-				if(dataToReceive[5] == 1) usb_hid_rec_mes |= 1 << 3 ;
-		else {usb_hid_rec_mes &= ~(1 << 3);
-		flag = 1;}
+						if(dataToReceive[0] == 0) {
+							usb_hid_rec_mes &= ~(1 << dataToReceive[1]);}
+		else 	if(dataToReceive[0] == 1) {
+					usb_hid_rec_mes |= (1 << dataToReceive[1]);}
+		
+				if(dataToReceive[0] == 4){
+					blink_delay = dataToReceive[1];
+					if(dataToReceive[1] == 0xff){
+						dataToReceive[1]+=1;
+						flag = 1;}
+					}
     osDelay(100);
   }
   /* USER CODE END StartUSBReceiveTask */

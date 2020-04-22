@@ -38,6 +38,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define TIM1_Freq	20000
+#define TIM3_Freq	21000
+#define TIM4_Freq	22000
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

@@ -298,7 +298,7 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20004000</StartAddress>
+                <StartAddress>0x20008000</StartAddress>
                 <Size>0x20000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F411xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;    ../Middlewares/Third_Party/FreeRTOS/Source/include;    ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;    ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;    ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;    ../Drivers/CMSIS/Include;    ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc;    ..\Middlewares\ST\STM32_USB_Device_Library;    ..\Src;   ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc</IncludePath>
+              <IncludePath>../Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;       ../Middlewares/Third_Party/FreeRTOS/Source/include;       ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;       ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;       ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;       ../Drivers/CMSIS/Include;       ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc;       ..\Middlewares\ST\STM32_USB_Device_Library;       ..\Src;      ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

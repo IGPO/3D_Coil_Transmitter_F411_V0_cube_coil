@@ -31,7 +31,8 @@
 #include "usbd_customhid.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+//#define USB_HID_DATA_TO_HOST_LENGTH		64 // 5 for
+#define USB_HID_DATA_TO_HOST_LENGTH		4 // 5 for 
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY

@@ -1,7 +1,8 @@
 .mxproject
 
-/Drivers
-/
-MDK-ARM
-/Middlewares
-/Inc
+/Drivers/
+
+MDK-ARM/*
+MDK-ARM\3D_Coil_Transmitter_F411_V0_cube_coil\
+/Middlewares/
+/Inc/

@@ -32,8 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define USB_HID_DATA_TO_HOST_LENGTH		64 // 5 for
-#define USB_HID_DATA_TO_HOST_REPORT_ID		1
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

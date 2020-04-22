@@ -3,7 +3,7 @@
 <title>Static Call Graph - [3D_Coil_Transmitter_F411_V0_cube_coil\3D_Coil_Transmitter_F411_V0_cube_coil.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 3D_Coil_Transmitter_F411_V0_cube_coil\3D_Coil_Transmitter_F411_V0_cube_coil.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Apr 17 14:00:35 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Apr 21 17:14:55 2020
 <BR><P>
 <H3>Maximum Stack Usage =        288 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -434,7 +434,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[72]"></a>StartLedTask</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, freertos.o(.text))
+<P><STRONG><a name="[72]"></a>StartLedTask</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, freertos.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = StartLedTask &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -442,7 +442,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[73]"></a>StartUSBReceiveTask</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, freertos.o(.text))
+<P><STRONG><a name="[73]"></a>StartUSBReceiveTask</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, freertos.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = StartUSBReceiveTask &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -482,7 +482,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[80]"></a>MX_TIM3_Init</STRONG> (Thumb, 114 bytes, Stack size 40 bytes, tim.o(.text))
+<P><STRONG><a name="[80]"></a>MX_TIM3_Init</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = MX_TIM3_Init &rArr; HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
